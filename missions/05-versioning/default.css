@@ -1,0 +1,13 @@
+body {
+  font-family: "Helvetica", Arial, sans-serif;
+  margin: 0 auto;
+  padding: 1em;
+}
+
+h1 {
+  text-align: center;
+}
+
+img {
+  max-width: 200px;
+}

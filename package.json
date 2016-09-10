@@ -1,0 +1,14 @@
+{
+  "name": "pragmatists-guide-to-sw",
+  "version": "1.0.0",
+  "description": "A Pragmatist's Guide to Service Workers",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lyza Danger Gardner",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}

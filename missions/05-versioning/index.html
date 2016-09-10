@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Service Workers: Application Shell</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="./default.css" rel="stylesheet" title="Default Style">
+</head>
+<body>
+
+<h1>Application Shell Test</h1>
+
+<button name="cloudy" id="gimme-a-cloud" style="display:none">Gimme Another Cloud</button>
+
+<div><img src="static-assets/cloud-1.jpg" alt="A cloud" id="cloud-holder" /></div>
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('./service-worker.js')
+  .then(function(reg) {
+    var buttonEl = document.getElementById('gimme-a-cloud');
+    var cloudEl  = document.getElementById('cloud-holder');
+    var cloudNum = 1;
+
+    buttonEl.style.display = 'block';
+    buttonEl.addEventListener('click', function () {
+      if (++cloudNum > 20) {
+        alert('I am all out of clouds');
+        return;
+      }
+      cloudEl.setAttribute('src', 'static-assets/cloud-' + cloudNum + '.jpg');
+    });
+  }).catch(function(error) {
+    console.log('Registration failed with ' + error);
+  });
+}
+
+</script>
+</body>
+</html>

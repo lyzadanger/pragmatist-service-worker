@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Registering a Service Worker</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="/default.css" rel="stylesheet" title="Default Style">
+
+</head>
+<body>
+
+<h1>Offline Fallback Test</h1>
+
+<p>If you see this, you are online</p>
+
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('./service-worker.js')
+  .then(function(reg) {
+    // registration worked
+    console.log('Registration succeeded. Scope is ' + reg.scope);
+  }).catch(function(error) {
+    // registration failed
+    console.log('Registration failed with ' + error);
+  });
+}
+</script>
+</body>
+</html>

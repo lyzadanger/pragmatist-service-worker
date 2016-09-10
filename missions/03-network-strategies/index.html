@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Service Workers: Network Strategies</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="/default.css" rel="stylesheet" title="Default Style">
+</head>
+<body>
+
+<h1>Network Strategies Test</h1>
+
+<img src="static-assets/IMG_3444.jpg" alt="A cloud" />
+<img src="static-assets/IMG_3445.jpg" alt="A cloud" />
+<img src="static-assets/IMG_3446.jpg" alt="A cloud" />
+<img src="static-assets/IMG_3447.jpg" alt="A cloud" />
+<img src="static-assets/IMG_3448.jpg" alt="A cloud" />
+<img src="static-assets/IMG_3449.jpg" alt="A cloud" />
+<img src="static-assets/IMG_3450.jpg" alt="A cloud" />
+<img src="static-assets/IMG_3451.jpg" alt="A cloud" />
+<img src="static-assets/IMG_3452.jpg" alt="A cloud" />
+<img src="static-assets/IMG_3453.jpg" alt="A cloud" />
+<img src="static-assets/IMG_3454.jpg" alt="A cloud" />
+<img src="static-assets/IMG_3455.jpg" alt="A cloud" />
+<img src="static-assets/IMG_3456.jpg" alt="A cloud" />
+<img src="static-assets/IMG_3457.jpg" alt="A cloud" />
+<img src="static-assets/IMG_3458.jpg" alt="A cloud" />
+<img src="static-assets/IMG_3459.jpg" alt="A cloud" />
+<img src="static-assets/IMG_3460.jpg" alt="A cloud" />
+<img src="static-assets/IMG_3461.jpg" alt="A cloud" />
+<img src="static-assets/IMG_3462.jpg" alt="A cloud" />
+<img src="static-assets/IMG_3463.jpg" alt="A cloud" />
+
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('./service-worker.js')
+  .then(function(reg) {
+    // registration worked
+    console.log('Registration succeeded. Scope is ' + reg.scope);
+  }).catch(function(error) {
+    // registration failed
+    console.log('Registration failed with ' + error);
+  });
+}
+</script>
+</body>
+</html>
